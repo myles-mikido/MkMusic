@@ -1,0 +1,35 @@
+.galada-regular {
+  font-family: "Galada", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.upload-btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #00f260;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.upload-btn:hover {
+    background-color: #0575e6;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+form .btn-primary {
+    background-color: #00f260;
+    border: none;
+}
+
+form .btn-primary:hover {
+    background-color: #0575e6;
+}

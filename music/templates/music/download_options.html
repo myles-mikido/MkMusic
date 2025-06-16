@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2>{{ music.title }} by {{ music.artist }}</h2>
+    <img src="{{ music.cover.url }}" alt="{{ music.title }}" class="img-fluid rounded mb-4" style="max-width: 150px;">
+
+    <div class="d-grid gap-3 col-6 mx-auto">
+        <a href="{{ music.audio_file.url }}" download class="btn btn-success">
+            Download MP3 (Audio) - {{ music.audio_file_size_mb }} MB
+        </a>
+        {% if music.video_file %}
+            <a href="{{ music.video_file.url }}" download class="btn btn-danger">
+                Download MP4 (Video) - {{ music.video_file_size_mb }} MB
+            </a>
+        {% endif %}
+        {% if music.lyrics_file %}
+            <a href="{{ music.lyrics_file.url }}" download class="btn btn-info">
+                Download Lyrics - {{ music.lyrics_file_size_kb }} KB
+            </a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
